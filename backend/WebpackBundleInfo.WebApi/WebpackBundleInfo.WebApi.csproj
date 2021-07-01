@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebpackBundleInfo.DataAccess\WebpackBundleInfo.DataAccess.csproj" />
+    <ProjectReference Include="..\WebpackBundleInfo.Domain\WebpackBundleInfo.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

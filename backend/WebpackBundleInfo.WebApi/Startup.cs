@@ -28,6 +28,15 @@ namespace WebpackBundleInfo
                     .AllowAnyHeader();
             }));
 
+            services.AddSwaggerGen(config =>
+            {
+                config.SwaggerDoc("default", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "default",
+                    Version = "v1"
+                });
+            });
+
             services.AddDomain();
             services.AddDataAccess(this.configuration.GetConnectionString("DataContext"));
         }
@@ -44,6 +53,12 @@ namespace WebpackBundleInfo
             }
 
             app.UseCors("DefaultPolicy");
+
+            app.UseSwagger();
+            app.UseSwaggerUI(config =>
+            {
+                config.SwaggerEndpoint("/swagger/default/swagger.json", "default");
+            });
 
             app.UseRouting();
 

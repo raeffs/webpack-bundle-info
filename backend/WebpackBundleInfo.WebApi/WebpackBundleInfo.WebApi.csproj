@@ -4,7 +4,16 @@
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>WebpackBundleInfo</RootNamespace>
     <Nullable>enable</Nullable>
+    <UserSecretsId>3bb9275c-bb7e-4707-898a-98e9efb45477</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\WebpackBundleInfo.DataAccess\WebpackBundleInfo.DataAccess.csproj" />
